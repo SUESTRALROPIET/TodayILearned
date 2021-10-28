@@ -1,6 +1,6 @@
 ## 1222_계산기1
 
-[문제보기]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14mbSaAEwCFAYD&amp;categoryId=AV14mbSaAEwCFAYD&amp;categoryType=CODE&amp;problemTitle=%EA%B3%84%EC%82%B0%EA%B8%B0&amp;orderBy=FIRST_REG_DATETIME&amp;selectCodeLang=ALL&amp;select-1=&amp;pageSize=10&amp;pageIndex=1
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14mbSaAEwCFAYD&categoryId=AV14mbSaAEwCFAYD&categoryType=CODE&problemTitle=%EA%B3%84%EC%82%B0%EA%B8%B0&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
 > 후위 표기식으로 바꾸어 계산하기
 > - 연산자는 + 뿐
