@@ -1,2 +1,6 @@
-# TodayILearned
-commit everyday things i learned
+# Today I Learned
+
+### Algorithm
+
+- SWEA
+
