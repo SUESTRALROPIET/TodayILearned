@@ -2,14 +2,9 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD&categoryId=AV141176AIwCFAYD&categoryType=CODE&problemTitle=%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-> 완전 이진 트리에 담긴 수식이 계산이 가능한 수식인지 아닌지 판별하기
->
-> - 계산이 가능하면 1
-> - 계산이 불가능하면 0
 
 
-
-#### 1. 노드에 담긴 값이 숫자이면 1, 연산자이면 0으로 입력받기
+#### 1. dfs로 탐색하기 + 노드에 담긴 값이 숫자이면 1, 연산자이면 0으로 입력받기
 
 1. root_list (노드에 담긴 값)에 입력값을 담을 때, 숫자는 1 / 연산자는 0으로 변환한 후,
 2. 자식 노드들을 and 연산하여 루트 노드(노드번호 1번)값을 반환한다.

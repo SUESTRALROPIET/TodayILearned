@@ -2,10 +2,6 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14mbSaAEwCFAYD&categoryId=AV14mbSaAEwCFAYD&categoryType=CODE&problemTitle=%EA%B3%84%EC%82%B0%EA%B8%B0&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-> 후위 표기식으로 바꾸어 계산하기
-> - 연산자는 + 뿐
-> - 피연산자는 0 ~ 9 사이의 정수
-
 
 
 #### 1. 입력값을 '+' 기준으로 split하여 => 리스트의 합으로 결과 반환하기

@@ -1,12 +1,6 @@
-## 1218_괄호 짝짓기
+import sys
+sys.stdin = open('input.txt')
 
-https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV14eWb6AAkCFAYD&categoryId=AV14eWb6AAkCFAYD&categoryType=CODE&problemTitle=&orderBy=PASS_RATE&selectCodeLang=PYTHON&select-1=4&pageSize=10&pageIndex=1
-
-
-
-#### 1. 괄호는 짝 맞추어 dict에 담아놓고 + stack에 append/pop하면서 입력값 검사하기
-
-```python
 for test in range(1, 11):
     N = int(input())
     input_list = list(input())
@@ -33,5 +27,3 @@ for test in range(1, 11):
         result = 1
     
     print('#{} {}'.format(test, result))
-```
-
