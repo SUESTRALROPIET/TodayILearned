@@ -22,8 +22,10 @@ def bfs():
             if not (0 <= ni < N and 0 <= nj < N):
                 continue
 
-            if result + matrix[ni][nj] < min_result:
-                stack.append((ni, nj, result + matrix[ni][nj]))
+            if not checked[ni][nj]:
+                if result + matrix[ni][nj] < min_result:
+                    checked[ni][nj] = 1
+                    stack.append((ni, nj, result + matrix[ni][nj]))
             
         stack_idx += 1
 
