@@ -1,16 +1,6 @@
-## 1227_미로2
+import sys
+sys.stdin = open('input.txt')
 
-https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV14wL9KAGkCFAYD&categoryId=AV14wL9KAGkCFAYD&categoryType=CODE&problemTitle=&orderBy=PASS_RATE&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=1
-
-> 100 * 100 미로에서 출발점 ~ 목적지까지 길이 있으면 1 / 없으면 0 반환하기
->
-> - 0 : 길 / 1 : 벽 / 2 : 출발지 / 3 : 목적지
-
-
-
-#### 1. bfs 로 탐색하기
-
-```python
 def bfs():
     global stack, stack_idx, result
 
@@ -63,9 +53,6 @@ for _ in range(1, 11):
     bfs()   
 
     print('#{} {}'.format(test, result))
-```
 
 
-
-
-
+    
