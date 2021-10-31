@@ -1,14 +1,6 @@
-## 1211_Ladder2
+import sys
+sys.stdin = open('input.txt')
 
-https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14BgD6AEECFAYh&categoryId=AV14BgD6AEECFAYh&categoryType=CODE&problemTitle=1211&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
-
-
-
-#### 1. dfs + visited 배열로 풀기
-
-> 처음에 visited를 해주지 않아서 재귀함수호출 초과 오류가 났다
-
-```python
 def dfs(start_point, now_x, now_y, cum_V):
     global min_V, result
 
@@ -66,5 +58,3 @@ for _ in range(10):
         dfs(start, 0, start, 1)     # dfs를 (0, 출발 인덱스)부터 출발! //start는 출발지 idx 기록하기 위해서 추가!
     
     print('#{} {}'.format(test, result))
-```
-

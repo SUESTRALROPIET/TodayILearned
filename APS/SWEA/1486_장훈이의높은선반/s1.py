@@ -1,12 +1,9 @@
-## 1486_장훈이의 높은 선반
+import sys
+# import time
 
-https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV2b7Yf6ABcBBASw&categoryId=AV2b7Yf6ABcBBASw&categoryType=CODE&problemTitle=1486&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
+# start = time.time() 
+sys.stdin = open('input.txt')
 
-#### 1. 부분집합의 합으로 구하기
-
-> shift연산을 구현하기까지 아직은 고민할 시간이 필요하다.
-
-```python
 T = int(input())
 for test in range(1, T+1):
     N, B = map(int, input().split())    # 직원 수 / 최소 값
@@ -25,7 +22,5 @@ for test in range(1, T+1):
             result = temp_result
             
     print('#{} {}'.format(test, result - B))
-```
 
-
-
+# print("time :", time.time() - start)
