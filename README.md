@@ -1,6 +1,6 @@
 # Today I Learned
 
-### Algorithm
+### APS
 
 - SWEA
 
