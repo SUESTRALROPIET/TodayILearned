@@ -2,7 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV5LwsHaD1MDFAXc&categoryId=AV5LwsHaD1MDFAXc&categoryType=CODE&problemTitle=&orderBy=PASS_RATE&selectCodeLang=PYTHON&select-1=4&pageSize=10&pageIndex=2
 
-#### 1. dfs로 주변을 연쇄적으로 터뜨리기
+#### 1. dfs로 주변을 연쇄적으로 터뜨리기 (fail)
 
 > - dfs로 연쇄적으로 터뜨리긴 했으나 최소한 몇 번 클릭해야하는지 구하지 못했다.
 
