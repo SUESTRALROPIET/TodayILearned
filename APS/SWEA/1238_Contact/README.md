@@ -2,11 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15B1cKAKwCFAYD&categoryId=AV15B1cKAKwCFAYD&categoryType=CODE&problemTitle=&orderBy=PASS_RATE&selectCodeLang=PYTHON&select-1=4&pageSize=10&pageIndex=2
 
-#### 1. 인접 행렬로 간선 표현 + dfs 하는 방법으로 해결 X
-
-> dfs로 해결하려다 보니 결과값을 제대로 찾지 못했다.
-
-#### 2. 인접 리스트로 간선 표현 + bfs 하기
+#### 1. 인접 리스트로 간선 표현 + bfs 하기
 
 ```python
 def bfs(now_node, cnt):
@@ -48,5 +44,7 @@ for test in range(1, 11):
     print('#{} {}'.format(test, result_node))
 ```
 
+#### 2. 인접 행렬로 간선 표현 + dfs 하는 방법으로 해결 X
 
+> dfs로 해결하려다 보니 결과값을 제대로 찾지 못했다.
 
