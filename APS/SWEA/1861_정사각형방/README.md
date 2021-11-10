@@ -1,6 +1,9 @@
-import sys
-sys.stdin = open('input.txt')
+## 1861_정사각형방
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LtJYKDzsDFAXc&categoryId=AV5LtJYKDzsDFAXc&categoryType=CODE&problemTitle=1861&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
+#### 1.DFS로 풀기
+> 시간초과
+```python
 def dfs(start_i, start_j, now_i, now_j, cnt):
     global result_cnt, result_list
 
@@ -35,3 +38,7 @@ for test in range(1, T+1):
             dfs(i, j, i, j, 1)
 
     print('#{} {} {}'.format(test, min(result_list), result_cnt))
+```
+
+#### 2. BFS로 풀기
+

@@ -4,7 +4,6 @@ sys.stdin = open('input.txt')
 def dfs(start_i, start_j, now_i, now_j, cnt):
     global result_cnt, result_list
 
-    # 횟수 / 횟수와 동일한 결과를 같는 출발지점 수 기록하기
     if result_cnt < cnt:
         result_list = []
         result_cnt = cnt
@@ -19,7 +18,7 @@ def dfs(start_i, start_j, now_i, now_j, cnt):
         nj = now_j + dj[k]
         if not (0 <= ni < N and 0 <= nj < N):
             continue
-        if matrix[now_i][now_j] + 1 == matrix[ni][nj]:  # 1보다 큰 방으로만 이동
+        if matrix[now_i][now_j] + 1 == matrix[ni][nj]:
             dfs(start_i, start_j, ni, nj, cnt+1)
 
 T = int(input())
