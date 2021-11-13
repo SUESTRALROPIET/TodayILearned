@@ -25,6 +25,7 @@ for test in range(1, T+1):
             for keypad in keypad_dict:  # keypad를 반복하면서
                 if ele in keypad_dict[keypad]:  # 해당 숫자의 value값에 알파벳이 있으면
                     temp_str += keypad      # 문자열에 key값 추가
+                    break
             if temp_str == input_str:   # 만들어진 문자열이 주어진 input_str과 같으면 cnt++
                 cnt += 1    
 
