@@ -38,7 +38,5 @@ for t in range(1, int(input())-1):
         x, y = map(int, input().split())
         # 비트 연산에 편하게 맞추기 위해 1번째 선수가 아닌 0번째 선수부터 시작하는 것으로 한다.
         front[y-1].append(x-1)
-    print(front)
-    print(dp)
     # DP(0)은 아무도 통과하지 않은 상태부터 시작하겠다는 것
-    print('#%d %d' % (t, DP(0)))
+    print('#%d %d' % (t, DP(0)))    
