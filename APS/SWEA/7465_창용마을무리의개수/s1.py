@@ -2,20 +2,14 @@ import sys
 sys.stdin = open('input.txt')
 
 def find(x):
-    if x == target_list[x]:
+    if x == target_list[x]:     # 본인이 부모이면 본인 return
         return x
-    else:
+    else:                       # 아니면 부모 찾아서 return
         return find(target_list[x])
 
 def union(x, y):
-    x = find(x)
-    y = find(y)
-    
-    if x > y:
-        x, y = y, x
+    target_list[find(y)] = find(x)  # y에 x의 부모 담기
 
-    target_list[y] = x
-     
 T = int(input())
 for test in range(1, T+1):
     N, M = map(int, input().split())
@@ -24,6 +18,7 @@ for test in range(1, T+1):
     for _ in range(M):
         a, b = map(int, input().split())
         union(a, b)
+        # print(target_list)
 
     result_list = [find(i) for i in range(N+1)]
     result = set(result_list)
