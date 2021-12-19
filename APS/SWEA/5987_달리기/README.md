@@ -1,7 +1,7 @@
 ## 5987_달리기
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWaJ4g86WA4DFAUQ&categoryId=AWaJ4g86WA4DFAUQ&categoryType=CODE&problemTitle=5987&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-#### 1. 순열로 푸니 당연히 큰 수에서 시간초과
+#### ~~1. 순열로 푸니 당연히 큰 수에서 시간초과~~
 ```python
 def get_order(k):
     if k == N:

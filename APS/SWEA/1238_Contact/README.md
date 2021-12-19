@@ -44,7 +44,7 @@ for test in range(1, 11):
     print('#{} {}'.format(test, result_node))
 ```
 
-#### 2. 인접 행렬로 간선 표현 + dfs 하는 방법으로 해결 X
+#### ~~2. 인접 행렬로 간선 표현 + dfs 하는 방법으로 해결 X~~
 
 > dfs로 해결하려다 보니 결과값을 제대로 찾지 못했다.
 

@@ -2,7 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBnFuhqxE8DFAWr&categoryId=AWBnFuhqxE8DFAWr&categoryType=CODE&problemTitle=3316&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1&&&&&&&&&
 
-#### 1. 가능한 모든 경우를 만든 후, 조건으로 걸러내기
+#### ~~1. 가능한 모든 경우를 만든 후, 조건으로 걸러내기~~
 
 > 시간 초과
 

@@ -2,13 +2,13 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD&categoryId=AV15QRX6APsCFAYD&categoryType=CODE&problemTitle=1249&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-#### 1. DFS로 풀기
+#### ~~1. DFS로 풀기~~
 
 > 시간초과로 테스트케이스 3개까지 밖에 실행되지 않는다
 
 
 
-#### 2. BFS로 풀기
+#### ~~2. BFS로 풀기~~
 
 > check 처리를 잘못해서 한 번 거쳐간 길을 다시 못 가서 값이 오류가 있다.
 

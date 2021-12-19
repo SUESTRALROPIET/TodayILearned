@@ -2,7 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWWxqfhKAWgDFAW4&categoryId=AWWxqfhKAWgDFAW4&categoryType=CODE&problemTitle=5550&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-#### 1. 각 문자열의 idx를 활용하여, 리스트 원소를 pop하여 구하기
+#### ~~1. 각 문자열의 idx를 활용하여, 리스트 원소를 pop하여 구하기~~
 > 제한시간 초과
 
  ```python

@@ -2,7 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWLv-yZah48DFAVV&categoryId=AWLv-yZah48DFAVV&categoryType=CODE&problemTitle=4301&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=1
 
-#### 1. 현재 기준! 길이가 2인 곳(상하좌우)을 dfs로 탐색하면서 boolean 값 담기
+#### ~~1. 현재 기준! 길이가 2인 곳(상하좌우)을 dfs로 탐색하면서 boolean 값 담기~~
 
 > Runtime error
 

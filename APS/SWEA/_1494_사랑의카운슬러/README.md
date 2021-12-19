@@ -2,7 +2,7 @@
 
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV2b_WPaAEIBBASw
 
-#### 1. 조합으로 풀기
+#### ~~1. 조합으로 풀기~~
 
 > 시간초과 해결 아직 못함
 
