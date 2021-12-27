@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('input.txt')
 
+# 피연산자가 3개 이상인 경우 X
 import itertools
 
 def get_result(num):
