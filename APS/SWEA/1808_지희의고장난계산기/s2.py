@@ -1,27 +1,35 @@
 import sys
 sys.stdin = open('input.txt')
 
-# 피연산자가 3개 이상인 경우 X
 import itertools
 
-def get_result(num):
-    global target, min_result
+def get_result(share, cnt):
+    global min_result
 
-    if int(target) % int(num) == 0:     # 나머지 없이 나눠지게 되면
-        share = str(int(target)//int(num))  # 몫의 숫자를 확인해서
-        for ele in share:                   
-            if ele in possible_num:         # 모두 누를 수 있는 숫자인지 확인
-                continue
-            else:                           # 아니라면 => return 
-                return
+    for num in num_lst:
+        if num == 0 or num == 1:  # num이 0이거나 1이면 연산 X
+            continue
 
-        result = len(num) + len(share) + 2  # 모든 숫자가 있다면 => 각 숫자 길이 + 곱셈 + 등호 
+        if share < num:           # num이 나눌 수(share)보다 크면 연산 X
+            continue
 
-        if result < min_result: # result가 min_result보다 작으면 반환
-            min_result = result
-        
+        if share % num == 0:            # 나누어 떨어지면
+            new_share = share // num        # new_share에 몫을 저장하고
+
+            if new_share not in num_lst:    # new_share가 바로 조합할 수 없는 숫자이면
+                return get_result(new_share, cnt + len(str(num)) + 1)   # 몫으로 다시 탐색하기
+
+            result = cnt + len(str(new_share)) + 1 + len(str(num)) + 1   # 지금까지 횟수 + 몫 길이 + 나누는 수 길이
+
+            if result < min_result:         # result가 min_result보다 작으면 반환
+                min_result = result
+            return
+    return
+
 T = int(input())
 for test in range(1, T+1):
+    if test == 8:
+        pass
     input_num = list(map(int, input().split()))     # (int) 0 ~ 9까지 가능 유무 => 1 / 0으로 이루어진 리스트
     target = input()                                # (str) 목표값
     N = len(target)                                 # 목표값 길이
@@ -44,20 +52,16 @@ for test in range(1, T+1):
 
     if get_comb:        # 바로 누를 수 없는 숫자는 조합을 조합하러 가기
         num_lst = []    # 가능한 조합을 담을 빈 리스트 초기화
-        for i in range(N, 0, -1):     # N+1자리 ~ 1의 자리 숫자 조합
-            num_lst += list(map(''.join, itertools.product(possible_num, repeat = i)))
+        for i in range(1, N+1):     # 1 ~ N+1 의 자리 숫자 조합
+            num_lst += list(map(''.join, itertools.product(possible_num, repeat=i)))
+
+        num_lst = list(set(map(int, num_lst)))      # 문자열인 숫자들을 정수형으로 바꿔 줌 => '01'과 같은 조합을 1로 변경 + set으로 중복 제거
+        num_lst.sort(reverse=True)                  # 큰 수 먼저 탐색하기 위해서 내림차순 정렬
 
         min_result = float('INF')   # 가장 적은 횟수를 담을 변수 초기화
 
-        for num in num_lst:     # 가능한 조합 리스트를 끝까지 탐색하며
-            if int(num) == 0 or int(num) == 1:  # 0이나 1로 나눠진 결과값은 넘어가기
-                continue
+        get_result(int(target), 0)
 
-            if int(target) < int(num):  # target보다 큰 num은 넘어가기
-                continue
-
-            else:       # 가능한 수 버튼 누르는 횟수 계산하러 가기
-                get_result(num)
     else:
         min_result = N + 1  # target 숫자 길이 + 등호 연산자 개수 
 
