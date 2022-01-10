@@ -7,6 +7,8 @@ https://greeksharifa.github.io/algorithm%20&%20data%20structure/2018/07/09/algor
 
 https://www.youtube.com/watch?v=fg2iGP4e2mc
 
+https://www.youtube.com/watch?v=hUjaxK9zx5M
+
 ### 풀이
 #### 1.
 
