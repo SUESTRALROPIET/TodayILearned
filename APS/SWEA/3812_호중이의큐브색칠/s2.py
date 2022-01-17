@@ -25,5 +25,7 @@ for test in range(1, T+1):
     for xy in range(N):
         for z in range(N):
             xyz_lst[(xy+z) % N] += (xy_lst[xy] * z_lst[z])
- 
+
+    # print(x_lst, y_lst)
+    # print(xy_lst)
     print('#{}'.format(test), *xyz_lst)
