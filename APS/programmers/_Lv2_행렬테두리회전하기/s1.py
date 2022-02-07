@@ -14,14 +14,14 @@ def solution(rows, columns, queries):
         if 3 < k:
             return
 
-        if start_x <= ni <= end_x and start_y <= nj <= end_y:
+        if start_x <= ni <= end_x and start_y <= nj <= end_y:   # 정해진 구간 안에서 시계방향으로 이동
             matrix_value = matrix[now_i][now_j]
             new_matrix[ni][nj] = matrix_value
             if matrix_value < min_result:
                 min_result = matrix_value
             return change(ni, nj, query, k)
 
-        else:
+        else:                                                   # 구간이 벗어나면 k를 증가시켜 방향 전환
             return change(now_i, now_j, query, k+1)
         
     matrix = [[0] + [0] * columns for _ in range(rows+1)]
