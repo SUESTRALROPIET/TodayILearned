@@ -1,7 +1,8 @@
 def solution(p):
     answer = ''
-    value_dict = {'(': 1, ')': -1}
+    value_dict = {'(': 1, ')': -1}      # 괄호에 값 지정하기
 
+    # 올바른 괄호 문자열이면 True 반환 / 아니면 False 반환
     def is_correct(input_str):
         now_value = 0
         for ele in input_str:
@@ -11,6 +12,7 @@ def solution(p):
         else:
             return True
 
+    # 주어진 값 균형잡힌 괄호 문자열로 나누기
     def divide_uv(input_str):
         input_str_len = len(input_str)
         u = ''
@@ -30,19 +32,19 @@ def solution(p):
         answer_lst.append(now_u)
         if now_v == '':
             break
-    
+
+    # 주어진 값 균형잡힌 괄호 문자열로 나누기
     answer_len = len(answer_lst)
-    for answer_idx in range(answer_len-1, -1, -1):
-        if is_correct(answer_lst[answer_idx]):
+    for answer_idx in range(answer_len-1, -1, -1):  # 균형잡힌 괄호 문자열 리스트 뒤에서부터 탐색하기
+        if is_correct(answer_lst[answer_idx]):      # 올바른 괄호 문자열이면 answer에 그대로 붙이기
             answer = answer_lst[answer_idx] + answer
-        else:
-            answer = '(' + answer + ')'
-            for answer_ele in answer_lst[answer_idx][1:-1]:
-                value_dict_keys=list(value_dict.keys())
+        else:                                       # 올바른 괄호 문자열이 아니면 (문제에 적힌 과정 참고)
+            answer = '(' + answer + ')'                 # 현재 answer에 양쪽에 괄호 붙이고
+            for answer_ele in answer_lst[answer_idx][1:-1]: # 양끝 제외하고 남은 문자열 '(' -> ')' / ')' -> '(' 로 붙이기
+                value_dict_keys = list(value_dict.keys())
                 if answer_ele == value_dict_keys[0]:
                     answer += value_dict_keys[1]
                 else:
                     answer += value_dict_keys[0]
 
     return answer
-
