@@ -43,7 +43,7 @@ def solution(orders, course):
                         continue
                 if judge_value:
                     answer[course_len][standard] += 1
-                    
+
         max_value = 0
         if list(answer[course_len].values()):
             if max(list(answer[course_len].values())) > 1:
