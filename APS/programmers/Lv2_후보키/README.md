@@ -2,7 +2,7 @@
 
 https://programmers.co.kr/learn/courses/30/lessons/42890
 
-#### 1. (bfs처럼 조건 계속 추가해서 stack에 쌓으면서 조합해보기
+#### 1. bfs처럼 조건 계속 추가해서 stack에 쌓으면서 조합해보기
 > - 최소성 검사하는 부분에서 오래걸림 => set을 활용해서 최소성 검사함
 
 ```python
