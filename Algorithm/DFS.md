@@ -42,7 +42,7 @@
   3. O(V + E)
 
 ## 관련 기술면접 질문
-1. DFS/BFS에 대해 구현방법설명
+1. DFS/BFS의 차이
     <details>
     <summary>답변</summary>
     <p> 
@@ -52,7 +52,7 @@
     </p>
     </details>
 
-2. DFS와 다익스트라 알고리즘의 차이, 왜 사용하는곳이 다른지
+2. DFS와 다익스트라 알고리즘의 차이
     <details>
     <summary>답변</summary>
     <p>
