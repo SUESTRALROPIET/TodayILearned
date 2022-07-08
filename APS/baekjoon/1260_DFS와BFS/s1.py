@@ -1,23 +1,25 @@
 import sys
 sys.stdin = open('input.txt')
 
+from collections import deque
+
 def DFS(num):
-    if visited[num]:
-        return
     visited[num] = 1
     print(num, end = " ")
     for next in sorted(edges[num]):
-        DFS(next)
+        if not visited[next]:
+            DFS(next)
 
-def BFS(q):
+def BFS():
+    q = deque([V])
+    visited[V] = 1
     while q:
-        now = q.pop(0)
-        if visited[now]:
-            continue
-        visited[now] = 1
+        now = q.popleft()
         print(now, end = " ")
-
-        q += sorted(edges[now])
+        for next in sorted(edges[now]):
+            if not visited[next]:
+                q.append(next)
+                visited[next] = 1
 
 N, M, V = map(int, input().split())
 edges = [[] for _ in range(N + 1)]
@@ -33,4 +35,4 @@ DFS(V)
 print()
 
 visited = [0] * (N + 1)
-BFS([V])
+BFS()
