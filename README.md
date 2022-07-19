@@ -5,6 +5,5 @@
 - [알고리즘 풀이](./APS)
 
 ## SQL
-[SQL](./SQL.md)
-
-[SQL 풀이](./SQLexercises.md)
+- [SQL](./SQL.md)
+- [SQL 풀이](./SQLexercises.md)
