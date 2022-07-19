@@ -1,21 +1,21 @@
 # SQL
-[SQL이란?](##SQL(Structured-Query-Language))
+[SQL이란?](#sqlstructured-query-language)
 
-[SQL문 - DB편](##DB-관련-SQL문)
+[SQL문 - DB편](#db-관련-sql문)
 
-[SQL문 - TABLE편](##TABLE-관련-SQL문)
+[SQL문 - TABLE편](#table-관련-sql문)
 
-[SQL문 - 레코드/컬럼편(DML, 조작)](##레코드/컬럼별-SQL문---DML(조작))
+[SQL문 - 레코드/컬럼편(DML, 조작)](#레코드컬럼별-sql문---dml조작)
 
-[1. SQLite Aggregate Functions](##SQLite-Aggregate-Functions)
+[1. SQLite Aggregate Functions](#sqlite-aggregate-functions)
 
-[2. LIKE문](##LIKE)
+[2. LIKE문](#like)
 
-[3. ORDER BY문](##ORDER-BY)
+[3. ORDER BY문](#order-by)
 
-[4. GROUP BY문](##GROUP-BY)
+[4. GROUP BY문](#group-by)
 
-[5. ALTER문](##`ALTER`-TABLE)
+[5. ALTER문](#alter-table)
 
 ## SQL(Structured Query Language)
 - 관계형 데이터 베이스 관리시스템의 데이터 관리 를 위해 설계된 특수 목적으로 사용되는 프로그래밍 언어(DB를 조작하기 위해 만들어진 언어)
