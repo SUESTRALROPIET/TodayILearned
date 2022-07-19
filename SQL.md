@@ -1,3 +1,22 @@
+# SQL
+[SQL이란?](##SQL(Structured-Query-Language))
+
+[SQL문 - DB편](##DB-관련-SQL문)
+
+[SQL문 - TABLE편](##TABLE-관련-SQL문)
+
+[SQL문 - 레코드/컬럼편(DML, 조작)](##레코드/컬럼별-SQL문---DML(조작))
+
+[1. SQLite Aggregate Functions](##SQLite-Aggregate-Functions)
+
+[2. LIKE문](##LIKE)
+
+[3. ORDER BY문](##ORDER-BY)
+
+[4. GROUP BY문](##GROUP-BY)
+
+[5. ALTER문](##`ALTER`-TABLE)
+
 ## SQL(Structured Query Language)
 - 관계형 데이터 베이스 관리시스템의 데이터 관리 를 위해 설계된 특수 목적으로 사용되는 프로그래밍 언어(DB를 조작하기 위해 만들어진 언어)
 - 데이터 베이스 스키마 생성 및 수정
@@ -53,7 +72,7 @@
     ```
     > 외부파일을 지정한 테이블명으로 table 생성
 
-## TABLE 관련 SQL문 - DML(조작)
+## TABLE 관련 SQL문
 1. table 조회하기
     ```bash
     .tables
@@ -78,7 +97,7 @@
     DROP TABLE 테이블명;
     ```
 
-## 레코드/컬럼별 SQL문
+## 레코드/컬럼별 SQL문 - DML(조작)
 1. INSERT: 특정 테이블에 레코드(행) 생성하기
     ```bash
     INSERT INTO 테이블명 (컬럼1, 컬럼2, ...) VALUES (값1, 값2, ...);
@@ -165,7 +184,7 @@
     ```bash
     SELECT * FROM 테이블명 ORDER BY 컬럼1, 컬럼2 ASC(or DESC);
     ```
-  
+
 ## GROUP BY
 - 행 집합에서 요약행 집합을 만듬
   ```bash
