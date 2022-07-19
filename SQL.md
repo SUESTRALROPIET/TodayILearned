@@ -7,7 +7,7 @@
 
 [SQL문 - 레코드/컬럼편(DML, 조작)](#레코드컬럼별-sql문---dml조작)
 
-[1. SQLite Aggregate Functions](#sqlite-aggregate-functions)
+[1. SQLite 집계합수(Aggregate Functions)](#sqlite-집계함수aggregate-functions)
 
 [2. LIKE문](#like)
 
@@ -40,12 +40,12 @@
     > 확장자는 `.db`, `.sqlite`, `.sqlite3`, 또는 없어도 되진만 확장자만으로도 파악이 가능하도록 지정하는 것을 권장한다.
 
 2. 현재 연결된 데이터베이스가 저장되는 파일명/위치 조회
-    ```bash
+    ```sql
     .databases
     ```
 
 3. 출력 모드 설정
-    ```bash
+    ```sql
     .mode 출력모드
     ```
     > `ascii` : ascii형식으로 출력
@@ -67,24 +67,24 @@
     > `tcl` : TCL의 List 형식
 
 4. 외부 파일 import해서 table 생성하기
-    ```bash
+    ```sql
     .import 외부파일명(확장자 포함) 테이블명
     ```
     > 외부파일을 지정한 테이블명으로 table 생성
 
 ## TABLE 관련 SQL문
 1. table 조회하기
-    ```bash
+    ```sql
     .tables
     ```
 
 2. table 컬럼명과 형식 모두 조회하기
-    ```bash
+    ```sql
     .schema 테이블명
     ```
 
 3. 테이블 생성하기
-    ```bash
+    ```sql
     CREATE TABLE 테이블명 (
       컬럼명 형식 PRIMARY KEY(기본키),
       컬럼명 형식 NOT NULL(빈값 허용X),
@@ -93,25 +93,25 @@
     ```
 
 4. 테이블 삭제하기
-    ```bash
+    ```sql
     DROP TABLE 테이블명;
     ```
 
 ## 레코드/컬럼별 SQL문 - DML(조작)
 1. INSERT: 특정 테이블에 레코드(행) 생성하기
-    ```bash
+    ```sql
     INSERT INTO 테이블명 (컬럼1, 컬럼2, ...) VALUES (값1, 값2, ...);
     ```
     > 모든 열에 데이터를 삽입하는 경우, clolumn을 명시하지 않아도 됨
 
 2. SELECT: 테이블에서 데이터 조회
     - 테이블 전체 조회
-        ```bash
+        ```sql
         SELECT * FROM 테이블명;
         ```
 
     - rowid와 함께 테이블 전체 조회
-        ```bash
+        ```sql
         SELECT rowid, * FROM 테이블명;
         ```
         > SQLite는 따로 PRIMARY KEY 속성의 컬럼을 작성하지 않으면 값이 자동으로 증가하는 PK 옵션을 가진 `rowid` 컬럼을 정의하고 있다.
@@ -124,7 +124,7 @@
         - `GROUP BY`
 
 3. DELETE: 테이블에서 행을 제거
-    ```bash
+    ```sql
     DELETE FROM 테이블명 WHERE 조건;
     ```
     > SQLite는 기본적으로 id를 재사용한다. 
@@ -136,29 +136,29 @@
     > (예) `id INTEGER PRIMARY KEY AUTOINCREMENT`
 
 4. UPDATE: 기존 행 데이터 수정
-    ```bash
+    ```sql
     UPDATE 테이블명 SET 컬럼1=값1, 컬럼2=값2, ... WHERE 조건;
     ```
 
-## SQLite Aggregate Functions
+## SQLite 집계함수(Aggregate Functions)
 1. `COUNT` : 레코드 개수 조회
-    ```bash
+    ```sql
     SELECT COUNT(컬럼) FROM 테이블명;
     ```
 2. `AVG` : 값 집합의 평균 값을 계산
-    ```bash
+    ```sql
     SELECT AVG(컬럼) FROM 테이블명;
     ```
 3. `MAX` : 그룹에 모든 값의 최대값을 가져옴
-    ```bash
+    ```sql
     SELECT MAX(컬럼) FROM 테이블명;
     ```
 4. `MIN` : 그룹에 있는 모든 값의 최소값을 가져옴
-    ```bash
+    ```sql
     SELECT MIN(컬럼) FROM 테이블명;
     ```
 5. `SUM` : 모든 값의 합을 계산
-    ```bash
+    ```sql
     SELECT SUM(컬럼) FROM 테이블명;
     ```
 
@@ -181,23 +181,23 @@
 - 정렬 기준
     1. `ASC` : 오름차순(기본값)
     2. `DESC` : 내림차순
-    ```bash
+    ```sql
     SELECT * FROM 테이블명 ORDER BY 컬럼1, 컬럼2 ASC(or DESC);
     ```
 
 ## GROUP BY
 - 행 집합에서 요약행 집합을 만듬
-  ```bash
+  ```sql
   SELECT 컬럼1, aggregate함수(컬럼2) FROM 테이블 GROUP BY 컬럼1, 컬럼2;
   ```
 
 ## `ALTER` TABLE
 1. table 이름 변경
-    ```bash
+    ```sql
     ALTER TABLE 현재테이블명 RENAME TO 새테이블명;
     ```
 2. 테이블에 새로운 column 추가
-    ```bash
+    ```sql
     ALTER TABLE 테이블명 ADD COLUMN 컬럼명 데이터타입 (NOT NULL);
     ```
     > `NOT NULL` 설정시 기존 레코드에는 해당 컬럼값이 없어서 오류 발생
@@ -210,7 +210,7 @@
     > 
     >     `ALTER TABLE 테이블명 ADD COLUMN 컬럼명 데이터타입 NOT NULL DEFAULT 기본값;`
 3. column 이름 수정
-    ```bash
+    ```sql
     ALTER TALBE 테이블명
     RENAME COLUMN 현재컬럼명 TO 새컬럼명;
     ```
