@@ -311,11 +311,47 @@
         ORDER BY ANIMAL_ID;
     ```
 ## 그외
-1. 
+1. 이 서비스에서는 공간을 둘 이상 등록한 사람을 "헤비 유저"라고 부릅니다. 헤비 유저가 등록한 공간의 정보를 아이디 순으로 조회하는 SQL문을 작성해주세요.
      ```sql
-     
+         SELECT TMP1.ID, TMP1.NAME, TMP1.HOST_ID
+         FROM PLACES AS TMP1
+         JOIN (
+            SELECT HOST_ID
+            FROM PLACES
+            GROUP BY HOST_ID
+            HAVING COUNT(HOST_ID) > 1
+         ) AS TMP2
+         ON TMP1.HOST_ID = TMP2.HOST_ID
+         ORDER BY TMP1.ID;
      ```
-2. 
-     ```sql
-     
-     ```
+2. 데이터 분석 팀에서는 우유(Milk)와 요거트(Yogurt)를 동시에 구입한 장바구니가 있는지 알아보려 합니다. 우유와 요거트를 동시에 구입한 장바구니의 아이디를 조회하는 SQL 문을 작성해주세요. 이때 결과는 장바구니의 아이디 순으로 나와야 합니다.
+      1. `(INNER) JOIN` + `WHERE` 2번 사용하기
+         ```sql
+            SELECT DISTINCT TMP1.CART_ID
+            FROM CART_PRODUCTS AS TMP1
+            JOIN (
+               SELECT CART_ID
+               FROM CART_PRODUCTS
+               WHERE NAME = 'Yogurt'
+            ) AS TMP2
+            USING (CART_ID)
+            WHERE TMP1.NAME = 'Milk'
+            ORDER BY CART_ID;
+         ```
+      2. `(INNER) JOIN` + `WHERE` 1번 사용하기
+         ```sql
+            SELECT DISTINCT TMP1.CART_ID
+            FROM CART_PRODUCTS AS TMP1
+            JOIN CART_PRODUCTS AS TMP2
+            ON TMP1.CART_ID = TMP2.CART_ID
+            WHERE TMP1.NAME = 'Milk' AND TMP2.NAME='Yogurt'
+            ORDER BY CART_ID;
+         ```
+      3. `IN` 연산자 + `COUNT(DISTINCT 필드명)` 활용하기
+         ```sql
+               SELECT CART_ID
+               FROM CART_PRODUCTS
+               WHERE NAME IN ('Yogurt', 'Milk')
+               GROUP BY CART_ID 
+               HAVING COUNT(DISTINCT NAME) > 1;
+         ```
