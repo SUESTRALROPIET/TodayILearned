@@ -234,7 +234,7 @@
 > - sql server에서는 지원하지 않음
 > - 조건을 무조건 괄호 안에 적어야 한다.
 
-![JOINs](./SQL.assets/JOINs.png)
+![JOINs](./sql.assets/JOINs.png)
 
 1. (INNER) JOIN : 공통 레코드 반환
 2. LEFT (OUTER) JOIN : 왼쪽 레코드 전체 + 공통된 오른쪽 레코드 반환
