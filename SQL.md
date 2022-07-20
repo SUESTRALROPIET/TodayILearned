@@ -17,6 +17,8 @@
 
 [5. ALTER문](#alter-table)
 
+[6. JOINs](#joins)
+
 ## SQL(Structured Query Language)
 - 관계형 데이터 베이스 관리시스템의 데이터 관리 를 위해 설계된 특수 목적으로 사용되는 프로그래밍 언어(DB를 조작하기 위해 만들어진 언어)
 - 데이터 베이스 스키마 생성 및 수정
@@ -214,3 +216,31 @@
     ALTER TALBE 테이블명
     RENAME COLUMN 현재컬럼명 TO 새컬럼명;
     ```
+
+## JOINs
+```sql
+    SELECT 컬럼1, 컬럼2, 컬럼3, ...
+    FROM 테이블1
+    JOIN 테이블2
+    ON 두 테이블의 연결 조건;
+```
+> ON 조건절
+> - 컬럼명이 다르더라도 JOIN 조건을 사용할 수 있다. 
+>       (예) `테이블1.컬럼명 = 테이블2.컬럼명`
+> - ON 조건절 안에 WHERE 기능처럼 조건을 추가할 수 있다.
+> 
+> USING 조건절
+> - 같은 이름을 가진 컬럼들 중에서 원하는 컬럼에 대해서만 JOIN할 수 있다.
+> - sql server에서는 지원하지 않음
+> - 조건을 무조건 괄호 안에 적어야 한다.
+
+![JOINs](./SQL.assets/JOINs.png)
+
+1. (INNER) JOIN : 공통 레코드 반환
+2. LEFT (OUTER) JOIN : 왼쪽 레코드 전체 + 공통된 오른쪽 레코드 반환
+3. RIGHT (OUTER) JOIN : 오른쪽 레코드 전체 + 공통된 왼쪽 레코드 반환
+4. FULL (OUTER) JOIN : 왼쪽 레코드 전체 + 오른쪽 레코드 전체 반환
+
+> *Error: RIGHT and FULL OUTER JOINs are not currently supported*
+>
+> > SQLite는 왼쪽 외부 조인을 하는 `JOIN`과 `LEFT JOIN`만 지원하고 있어서 발생하는 에러
