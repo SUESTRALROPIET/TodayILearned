@@ -1,4 +1,4 @@
-## Lv.3 사칙연산
+## Lv.4 사칙연산
 
 https://school.programmers.co.kr/learn/courses/30/lessons/1843
 
