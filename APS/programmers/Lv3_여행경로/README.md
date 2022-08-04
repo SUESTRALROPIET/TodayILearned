@@ -2,7 +2,7 @@
 
 https://school.programmers.co.kr/learn/courses/30/lessons/43164
 
-#### 1.deque
+#### 1. deque + BFS
 > 시간복잡도: O(N * N-1 * N-2 * ... 2 * 1) = O(N^2)
 
  ```python
