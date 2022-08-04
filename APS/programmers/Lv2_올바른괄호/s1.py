@@ -1,5 +1,4 @@
 def solution(s):
-    answer = True
     cnt_dic = {'(': 0, ')': 0}
     
     for ele in s:

@@ -7,7 +7,6 @@ https://school.programmers.co.kr/learn/courses/30/lessons/12909
 
  ```python
   def solution(s):
-      answer = True
       cnt_dic = {'(': 0, ')': 0}
       
       for ele in s:
